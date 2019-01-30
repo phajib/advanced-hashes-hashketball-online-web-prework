@@ -251,8 +251,8 @@ def winning_team
   #home_points.sum = game_hash[:home][:players][:points]
   #away_points.sum = game_hash[:away][:players][:points]
 
-  home_total.sum{game_hash[:home][:players][:points]}
-  away_total.sum{game_hash[:away][:players][:points]}
+  home_total = points.sum{game_hash[:home][:players][:points]}
+  away_total = points.sum{game_hash[:away][:players][:points]}
 
   if home_total > away_total
     return game_hash[:home]
