@@ -248,8 +248,8 @@ def winning_team
 end
 =end
 def winning_team
-  home_points = game_hash[:home][:players][:points]
-  away_points = game_hash[:away][:players][:points]
+  home_points.sum = game_hash[:home][:players][:points]
+  away_points.sum = game_hash[:away][:players][:points]
 
   home_total = home_points.sum
   away_total = away_points.sum
