@@ -259,6 +259,6 @@ def winning_team
   elsif away_total > home_total
     return game_hash[:away]
   elsif home_total.sum == away_total.sum
-    return "A tie"
+    return "It's a tie!"
   end
 end
