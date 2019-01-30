@@ -247,6 +247,7 @@ def winning_team
   end
 end
 =end
+=begin
 def winning_team
   #home_points.sum = game_hash[:home][:players][:points]
   #away_points.sum = game_hash[:away][:players][:points]
@@ -261,4 +262,16 @@ def winning_team
   elsif home_total == away_total
     return "It's a tie!"
   end
+end
+=end
+
+def winning_team
+  points = Hash.new(0) #creates a new hash with a default value of 10
+  team = ""
+  game_hash.keys.each do |team|
+    game_hash[team][:players].each do |player, stats|
+      points[team] += stats[:points]
+    end
+  end
+  game_hash[points.keys.max][:team_name]
 end
