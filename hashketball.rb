@@ -238,7 +238,7 @@ def winning_team
   game_hash[:home][:players].each do |player_name, player_data|
     team_home += player_data[:points]
   end
-  
+
   if team_away > team_home
       game_hash[:away][:team_name]
   elsif team_home > team_away
@@ -247,3 +247,6 @@ def winning_team
       "It's a tie!"
   end
 end
+
+def player_with_longest_name
+  
