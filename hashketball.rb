@@ -231,11 +231,11 @@ end
 def winning_team
   home_team = 0
   away_team = 0
-  game_hash[:home][:players].each do |name, value|
-    home_team += value[:points]
+  game_hash[:home][:players].each do |player_name, player_data|
+    home_team += player_data[:points]
   end
-  game_hash[:away][:players].each do |name, value|
-    away_team += value[:points]
+  game_hash[:away][:players].each do |player_name, player_data|
+    away_team += player_data[:points]
   end
   if home_team > away_team
       game_hash[:home][:team_name]
