@@ -228,7 +228,6 @@ def most_points_scored
   player
 end
 
-=begin
 def winning_team
   home_team = 0
   away_team = 0
@@ -244,22 +243,5 @@ def winning_team
       game_hash[:away][:team_name]
   else
       "It's a tie!"
-  end
-end
-=end
-
-def winning_team
-  #home_points.sum = game_hash[:home][:players][:points]
-  #away_points.sum = game_hash[:away][:players][:points]
-
-  home_total = points.inject{game_hash[:home][:players][:points]}
-  away_total = points.inject{game_hash[:away][:players][:points]}
-
-  if home_total > away_total
-    return game_hash[:home]
-  elsif away_total > home_total
-    return game_hash[:away]
-  elsif home_total == away_total
-    return "It's a tie!"
   end
 end
